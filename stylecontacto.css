@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #111 url("imagenes/fondito.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #070707;
+  padding: 20px 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.activo {
+  color: #00c3ff;
+}
+
+main.contenedor-contacto {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #00c3ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 195, 255, 0.4);
+}
+
+p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+
+.formulario textarea {
+  resize: vertical;
+}
+
+.elboton {
+  background-color: #ff496e;
+  color: rgb(131, 230, 255);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.elboton:hover {
+  background-color: #e91e63;
+  transform: scale(1.05);
+}
+
+footer {
+  background: #000000;
+  color: #aaa;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: 0;
+}
+
+.sociales {
+  display: flex;
+  gap: 20px;
+}
+
+.sociales a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sociales a:hover {
+  color: #e91e63;
+}
+
+#contador {
+    color: white;
+}

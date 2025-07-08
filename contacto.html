@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto | Facundo Valtolina</title>
+  <link rel="stylesheet" href="stylecontacto.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor-contacto">
+    <h1>Contacto</h1>
+    <p>¿Querés dejarme un mensaje? Completá el formulario y te responderé pronto :)</p>
+    
+    <form class="formulario" id="formulario-contacto" action="#" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje acá..." required></textarea>
+      <small id="contador">0 / 300</small>
+
+      <button type="submit" class="elboton">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Facundo Valtolina</p>
+    <div class="sociales">
+      <a href="https://github.com/Facurulox" target="_blank">Mi GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    const textarea = document.getElementById("mensaje");
+    const contador = document.getElementById("contador");
+    const form = document.getElementById("formulario-contacto");
+
+    textarea.addEventListener("input", () => {
+      const caracteres = textarea.value.length;
+      contador.textContent = `${caracteres} / 300`;
+
+      if (caracteres > 300) {
+        textarea.style.border = "2px solid #ff1744";
+        contador.style.color = "#ff1744";
+      } else {
+        textarea.style.border = "2px solid #00c3ff";
+        contador.style.color = "#aaa";
+      }
+    });
+
+    form.addEventListener("submit", (e) => {
+      if (textarea.value.length > 300) {
+        e.preventDefault();
+        alert("El mensaje no puede superar los 300 caracteres.");
+      }
+    });
+  </script>
+</body>
+</html>
